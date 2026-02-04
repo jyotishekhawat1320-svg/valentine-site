@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/pinky/OneDrive/Scans/Desktop/myfirstwebsite.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>My First Valentine With---RONAK--- My favourite person 💖</title>
+<style>
+body{
+  margin:0;
+  font-family: 'Comic Sans MS', cursive;
+  background: radial-gradient(circle, #ffb6c1, #ff69b4);
+  overflow:hidden;
+  text-align:center;
+  color:#fff;
+}
+
+.page{
+  display:none;
+  height:100vh;
+  padding-top:80px;
+}
+
+.active{
+  display:block;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:28px;
+}
+
+button{
+  margin-top:40px;
+  padding:15px 35px;
+  font-size:20px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#ff1493;
+  cursor:pointer;
+}
+
+.emoji{
+  position:fixed;
+  top:-50px;
+  font-size:30px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform: translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <h1>FOR YOU, MY LOVE<br><span style="font-size:70px;">RONAK</span> 💖</h1>
+  <h2>PRE-PRE-PRE Valentine wishes just for you 🥹</h2>
+  <button onclick="next()">Start 💌</button>
+</div>
+
+<div class="page" data-emoji="🌹">
+  <h1>7 Feb – Rose Day 🌹</h1>
+  <h2>A rose for you, my baby 🌹✨</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="💌">
+  <h1>8 Feb – Propose Day 💌</h1>
+  <h2>Can I keep you… always? 🥹💖</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="🍫">
+  <h1>9 Feb – Chocolate Day sweetieee🫶🍩 🍫</h1>
+  <h2>Life feels better with chocolate… and you my princess 🍫</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="🧸">
+  <h1>10 Feb – Teddy Day 🧸</h1>
+  <h2>Sending you a teddy till I can hug you myself🧸🥹</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="🤝">
+  <h1>11 Feb – Promise Day 🤝</h1>
+  <h2>I promise to stay with you forever 🤞</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="🤗">
+  <h1>12 Feb – Hug Day 🤗</h1>
+  <h2>Sending virtual hug to my sweetheart 🤍</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="💋">
+  <h1>13 Feb – Kiss Day 💋</h1>
+  <h2>MUUHHHHAAAAHHHH 💋💋baaki milkar😚</h2>
+  <button onclick="next()">Next</button>
+</div>
+
+<div class="page" data-emoji="❤️">
+  <h1>14 Feb – Valentine’s Day ❤️</h1>
+  <h2>Will you be my Valentine, RONAK? 🥹</h2>
+  <button onclick="yes()">YES 💖</button>
+</div>
+
+<div class="page" data-emoji="🎉">
+  <h1>YAAAAAY 🎉🎉🎉ab toh aapki lifetime fielding set hai😚okaaay jaanu itnaa toh chalta hai</h1>
+  <h2>You are bestest thing that has ever been mine 💞</h2>
+  <h2>I love you today tomorrow and always❤️MISS YOUUU🥹</h2>
+</div>
+
+<script>
+let pages = document.querySelectorAll('.page');
+let index = 0;
+let rain;
+
+function next(){
+  clearInterval(rain);
+  pages[index].classList.remove('active');
+  index++;
+  pages[index].classList.add('active');
+  startRain();
+}
+
+function yes(){
+  next();
+}
+
+function startRain(){
+  let emoji = pages[index].getAttribute('data-emoji');
+  if(!emoji) return;
+
+  rain = setInterval(()=>{
+    let e = document.createElement('div');
+    e.className = 'emoji';
+    e.innerHTML = emoji;
+    e.style.left = Math.random()*100 + 'vw';
+    e.style.animationDuration = (2+Math.random()*3)+'s';
+    document.body.appendChild(e);
+    setTimeout(()=>e.remove(),5000);
+  },200);
+}
+</script>
+
+
+&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
